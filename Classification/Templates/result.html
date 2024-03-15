@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result_styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Classification Result</h1>
+        <p><strong>Name</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;{{ name }}</p>
+        <p><strong>Mobile Number</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;{{ mobile_number }}</p>
+        <p><strong>Email</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;{{ email }}</p>
+        <p><strong>Arts Known</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;{{ arts_known }}</p>
+        <p><strong>Years of Experience</strong>&nbsp;<strong>:</strong> {{ years_of_experience }}</p>
+        <p><strong>Classification Result</strong>&nbsp;<strong>:</strong> {{ result }}</p>
+
+        <br>
+        <form action="/save_to_database" method="post">
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="mobile_number" value="{{ mobile_number }}">
+            <input type="hidden" name="email" value="{{ email }}">
+            <input type="hidden" name="arts_known" value="{{ arts_known }}">
+            <input type="hidden" name="years_of_experience" value="{{ years_of_experience }}">
+            <input type="hidden" name="classification_result" value="{{ result }}">
+            <div class="button">
+
+            <button type="submit">Send Application to Admin</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

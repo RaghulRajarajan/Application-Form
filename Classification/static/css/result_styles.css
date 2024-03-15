@@ -1,0 +1,37 @@
+/* result_styles.css */
+
+body {
+    background-color: #f0f0f0; /* Set your desired background color */
+    font-family: "Poppins", sans-serif;
+}
+
+.result-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+
+    /* Apply flexbox properties */
+    padding-left: 25%;
+    display: block;
+    flex-direction: column;
+    text-align: justify; /* Align items horizontally */
+}
+
+h1 {
+    color: #333;
+}
+
+.result-message {
+    color: #555;
+    align-items: center;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.button {
+    padding-left:  10%;
+}
